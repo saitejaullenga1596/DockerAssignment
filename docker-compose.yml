@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+ postgreservice:
+  image: postgres
+  container_name: postgres-container
+  environment:
+    - POSTGRES_USER=postgres       # Set PostgreSQL username
+    - POSTGRES_PASSWORD=postgres # Set PostgreSQL password
+    - POSTGRES_DB=mypostgresql           # Set PostgreSQL database name
+  ports:
+   - "5432:5432" 
+  networks:
+  - multiServiceNetwork  
+
+ dataservice:
+  build:
+   context: ./dataService
+  container_name: dataservice-container
+  environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+  ports:
+  - "5482:8080" # Expose PostgreSQL
+  depends_on: 
+   - postgreservice
+  networks:
+  - multiServiceNetwork
+
+ cacheservice:
+  build:
+   context: ./cacheService
+  container_name: cacheservice-container
+  environment:
+   - ASPNETCORE_ENVIRONMENT=Development
+  ports:
+  - "5128:8080"
+  networks:
+  - multiServiceNetwork
+
+ webservice:
+  build:
+   context: ./webService
+  container_name: webservice-container
+  environment:
+   - ASPNETCORE_ENVIRONMENT=Development
+  ports:
+  - "5082:8080"
+  networks:
+  - multiServiceNetwork
+  depends_on:
+      - cacheservice  # Ensure this starts after cacheservice
+      - dataservice  # Ensure this starts after the database (dataservice)
+
+networks:
+  multiServiceNetwork:
+    driver: bridge

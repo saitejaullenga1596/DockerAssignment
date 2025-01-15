@@ -1,0 +1,199 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\multiService\\dataService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\controllers\\postdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:controllers\\postdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\service\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:service\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\interface\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:interface\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\dataservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:dataservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\model\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:model\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|c:\\projects\\multiservice\\dataservice\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1287281-98AB-446E-8E84-FF86FC8A249F}|dataService.csproj|solutionrelative:datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostDataController.cs",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\Controllers\\PostDataController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PostDataController.cs",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\Controllers\\PostDataController.cs",
+              "RelativeToolTip": "Controllers\\PostDataController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAArwCoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:20:27.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-13T04:48:14.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPostService.cs",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\Interface\\IPostService.cs",
+              "RelativeDocumentMoniker": "Interface\\IPostService.cs",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\Interface\\IPostService.cs",
+              "RelativeToolTip": "Interface\\IPostService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:30:53.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dataService.csproj",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\dataService.csproj",
+              "RelativeDocumentMoniker": "dataService.csproj",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\dataService.csproj",
+              "RelativeToolTip": "dataService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-13T07:36:56.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostService.cs",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\Service\\PostService.cs",
+              "RelativeDocumentMoniker": "Service\\PostService.cs",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\Service\\PostService.cs",
+              "RelativeToolTip": "Service\\PostService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAawBAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:29:11.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-15T04:57:41.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAtwBoAAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:32:30.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\Model\\Post.cs",
+              "RelativeDocumentMoniker": "Model\\Post.cs",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\Model\\Post.cs",
+              "RelativeToolTip": "Model\\Post.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:22:35.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-13T04:51:40.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Projects\\multiService\\dataService\\DataContext.cs",
+              "RelativeDocumentMoniker": "DataContext.cs",
+              "ToolTip": "C:\\Projects\\multiService\\dataService\\DataContext.cs",
+              "RelativeToolTip": "DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T04:45:24.012Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

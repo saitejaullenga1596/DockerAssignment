@@ -1,0 +1,6 @@
+@cacheService_HostAddress = http://localhost:5128
+
+GET {{cacheService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

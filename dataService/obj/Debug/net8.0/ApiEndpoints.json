@@ -1,0 +1,39 @@
+[
+  {
+    "ContainingType": "dataService.Controllers.PostDataController",
+    "Method": "PostDataAsync",
+    "RelativePath": "api/PostData/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "dataService.Model.Post",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dataService.Controllers.PostDataController",
+    "Method": "GetDataAsync",
+    "RelativePath": "api/PostData/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
