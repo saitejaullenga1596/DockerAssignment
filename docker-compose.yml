@@ -1,6 +1,27 @@
 version: '3.8'
 
 services:
+ webservice:
+  build:
+   context: ./webService
+  container_name: webservice-container
+  environment:
+   - ASPNETCORE_ENVIRONMENT=Development
+  ports:
+  - "5082:8080"
+  networks:
+  - multiServiceNetwork  
+  depends_on:
+    - cacheservice  # Ensure this starts after cacheservice
+    - dataservice
+  entrypoint: ["/webService/wait-for-postgres.sh", "/webService/wait-for-postgres.sh", "dotnet", "webservice.dll"] # Use wait script  
+  healthcheck:
+    test: ["CMD-SHELL", "curl --silent --fail http://localhost:8080/health || exit 1"]
+    interval: 10s
+    retries: 5
+    timeout: 5s
+    start_period: 10s
+
  postgreservice:
   image: postgres
   container_name: postgres-container
@@ -11,7 +32,15 @@ services:
   ports:
    - "5432:5432" 
   networks:
-  - multiServiceNetwork  
+  - multiServiceNetwork
+  volumes:
+  - postgres_data:/var/lib/postgresql/data  # Persist database data
+  healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U postgres"]
+    interval: 10s
+    retries: 5
+    timeout: 5s
+    start_period: 30s
 
  dataservice:
   build:
@@ -36,21 +65,10 @@ services:
   - "5128:8080"
   networks:
   - multiServiceNetwork
-
- webservice:
-  build:
-   context: ./webService
-  container_name: webservice-container
-  environment:
-   - ASPNETCORE_ENVIRONMENT=Development
-  ports:
-  - "5082:8080"
-  networks:
-  - multiServiceNetwork
-  depends_on:
-      - cacheservice  # Ensure this starts after cacheservice
-      - dataservice  # Ensure this starts after the database (dataservice)
-
+     
 networks:
   multiServiceNetwork:
     driver: bridge
+
+volumes:
+  postgres_data:  # Define volume for persisting PostgreSQL data   

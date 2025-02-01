@@ -26,5 +26,26 @@ RUN dotnet publish "./webservice.csproj" -c $BUILD_CONFIGURATION -o /app/publish
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
+
+# Switch to root to install PostgreSQL client utilities (pg_isready)
+USER root
+
+# Install curl in the final image
+RUN apt-get update && apt-get install -y curl
+
+# Install PostgreSQL client utilities (pg_isready)
+RUN apt-get update && apt-get install -y postgresql-client
+
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "webservice.dll"]
+
+# Copy the wait-for-postgres.sh script into the container
+COPY ./wait-for-postgres.sh /webService/wait-for-postgres.sh
+
+# Make the wait-for-postgres.sh script executable
+RUN chmod +x /webService/wait-for-postgres.sh
+
+# Switch back to the app user for the remaining work
+USER app
+
+# Set the entrypoint to run the wait-for-postgres.sh script and then start the web service
+ENTRYPOINT ["/bin/bash", "/webService/wait-for-postgres.sh", "dotnet", "webservice.dll"]
