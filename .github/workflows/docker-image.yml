@@ -28,29 +28,29 @@ jobs:
       # Log in to Docker Hub
       - uses: docker/login-action@v3.3.0
         with:
-         username: ${{ secrets.DOCKER_USERNAME }}
-         password: ${{ secrets.DOCKER_PASSWORD }}
+         username: ${{ vars.DOCKER_USERNAME }}
+         password: ${{ secrets.DOCKER_TOKEN }}
          
       # Build and push webservice Docker image
       - uses: docker/build-push-action@v2
         with:
          context: ./webService
          push: true
-         tags: ${{ secrets.DOCKER_USERNAME }}/webservice:latest
+         tags: ${{ vars.DOCKER_USERNAME }}/webservice:latest
 
       # Build and push dataservice Docker image
       - uses: docker/build-push-action@v2
         with:
          context: ./dataService
          push: true
-         tags: ${{ secrets.DOCKER_USERNAME }}/dataservice:latest
+         tags: ${{ vars.DOCKER_USERNAME }}/dataservice:latest
 
       # Build and push cacheservice Docker image
       - uses: docker/build-push-action@v2
         with:
          context: ./cacheService
          push: true
-         tags: ${{ secrets.DOCKER_USERNAME }}/cacheservice:latest
+         tags: ${{ vars.DOCKER_USERNAME }}/cacheservice:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -66,8 +66,8 @@ jobs:
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ vars.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_TOKEN }}
 
     - name: Deploy services with Docker Compose
       run: |
