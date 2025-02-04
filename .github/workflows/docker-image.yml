@@ -1,0 +1,75 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Log in to Docker Hub
+      - uses: docker/login-action@v3.3.3
+        with:
+         username: ${{ secrets.DOCKER_USERNAME }}
+         password: ${{ secrets.DOCKER_PASSWORD }}
+         
+      # Build and push webservice Docker image
+      - uses: docker/build-push-action@v2
+        with:
+         context: ./webService
+         push: true
+         tags: ${{ secrets.DOCKER_USERNAME }}/webservice:latest
+
+      # Build and push dataservice Docker image
+      - uses: docker/build-push-action@v2
+        with:
+         context: ./dataService
+         push: true
+         tags: ${{ secrets.DOCKER_USERNAME }}/dataservice:latest
+
+      # Build and push cacheservice Docker image
+      - uses: docker/build-push-action@v2
+        with:
+         context: ./cacheService
+         push: true
+         tags: ${{ secrets.DOCKER_USERNAME }}/cacheservice:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Deploy services with Docker Compose
+      run: |
+        docker-compose -f docker-compose.yml down  # Stop previous containers
+        docker-compose -f docker-compose.yml up -d  # Start the containers with the latest images
